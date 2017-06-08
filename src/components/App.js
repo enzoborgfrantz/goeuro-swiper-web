@@ -28,6 +28,7 @@ const CardWrapper = styled.div`
   flex-direction: column;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.17);
   background-color: white;
+  font-family: Roboto, sans-serif;
 `;
 
 const PictureWrapper = styled.img.attrs({
@@ -41,7 +42,9 @@ const PictureWrapper = styled.img.attrs({
 `;
 
 const DescriptionWrapper = styled.div`
-  ${''/* border: 2px solid rgba(233, 233, 233, 1); */}
+  border: 2px solid rgba(233, 233, 233, 1);
+  display: flex;
+  flex-flow: wrap;
   height: 90px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -55,10 +58,35 @@ const ButtonContainer = styled.div`
   flex: 1;
 `;
 
+
+const HalfWidthLabel = styled.div`
+  width: 50%;
+`;
+
+const FullWidthLabel = styled.div`
+  width: 100%;
+  font-size: 12px;
+`;
+
+const LeftLabel = styled.p`
+  text-align: left;
+  margin-left: 10px;
+`;
+
+const RightLabel = styled.p`
+  text-align: right;
+  margin-right: 10px;
+  font-weight: 300;
+`;
+
 const Card = ({ top, width }) => (
   <CardWrapper top={top} width={width}>
     <PictureWrapper url={'https://www.eurolines.co.uk/assets/v-20160315092537/germany/berlin/berlin-500x500.jpg'} />
-    <DescriptionWrapper />
+    <DescriptionWrapper>
+      <HalfWidthLabel> <LeftLabel> Berlin </LeftLabel> </HalfWidthLabel>
+      <HalfWidthLabel> <RightLabel> from 20$ </RightLabel> </HalfWidthLabel>
+      <FullWidthLabel> <LeftLabel> Train - Duration: 1hr 30min </LeftLabel> </FullWidthLabel>
+    </DescriptionWrapper>
   </CardWrapper>
 );
 
