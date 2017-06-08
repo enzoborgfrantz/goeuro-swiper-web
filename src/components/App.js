@@ -1,6 +1,30 @@
-import styled from 'styled-components';
-import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import React, { Component } from 'react';
 import helloWorld from '../modules/hello.module';
+
+const animationTime = 1.65;
+
+const SwipeLeft = keyframes`
+  from {
+    opacity: 1;
+    transform: translate3d(0%, 0, 0) rotate(0Deg);
+  }
+  to {
+    transform: translate3d(-145%, 0, 0) rotate(-35Deg);
+    opacity: 0;
+  }
+`;
+
+const SwipeRight = keyframes`
+  from {
+    opacity: 1;
+    transform: translate3d(0%, 0, 0) rotate(0Deg);
+  }
+  to {
+    transform: translate3d(145%, 0, 0) rotate(35Deg);
+    opacity: 0;
+  }
+`;
 
 const Button = styled.input.attrs({
   type: 'button',
@@ -12,10 +36,20 @@ const Button = styled.input.attrs({
   border: none;
   border-radius: 100%;
   border: 12px solid #f4f4f3;
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpUjnW1wLnbWx-O8vhXlV9ch6lzKzVEczq_3PaheaqzGCTnfHbeaM3RCY);
+  background: url(${props => props.url});
   background-size: cover;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   outline: none;
 `;
+
+
+const getAnimation = (left, right) => {
+  if (left) { return SwipeLeft; }
+  if (right) { return SwipeRight; }
+  return '';
+};
 
 const CardWrapper = styled.div`
   top: ${props => props.top}px;
@@ -29,6 +63,7 @@ const CardWrapper = styled.div`
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.17);
   background-color: white;
   font-family: Roboto, sans-serif;
+  animation: ${props => getAnimation(props.animateLeft, props.animateRight)} ${animationTime}s 1;
 `;
 
 const PictureWrapper = styled.img.attrs({
@@ -55,8 +90,9 @@ const ButtonContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   flex: 1;
+  position: relative;
+  top: 420px;
 `;
-
 
 const HalfWidthLabel = styled.div`
   width: 50%;
@@ -78,8 +114,8 @@ const RightLabel = styled.p`
   font-weight: 300;
 `;
 
-const Card = ({ top, width }) => (
-  <CardWrapper top={top} width={width}>
+const Card = ({ top, width, animateLeft, animateRight }) => (
+  <CardWrapper top={top} width={width} animateLeft={animateLeft} animateRight={animateRight}>
     <PictureWrapper url={'https://www.eurolines.co.uk/assets/v-20160315092537/germany/berlin/berlin-500x500.jpg'} />
     <DescriptionWrapper>
       <HalfWidthLabel> <LeftLabel> Berlin </LeftLabel> </HalfWidthLabel>
@@ -101,18 +137,57 @@ const Main = styled.div`
   flex-direction: column;
 `;
 
-export default function () {
-  return (
-    <Main>
-      <CardContainer>
-        <Card top={30} width={260} />
-        <Card top={20} width={280} />
-        <Card top={10} width={300} />
-      </CardContainer>
-      <ButtonContainer>
-        <Button onClick={() => { console.log('left'); }} />
-        <Button onClick={() => { console.log('right'); }} />
-      </ButtonContainer>
-    </Main>
-  );
+class Swiper extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      swipeLeft: false,
+      swipeRight: false,
+    };
+    this.performLeftSwipe = this.performLeftSwipe.bind(this);
+    this.performRightSwipe = this.performRightSwipe.bind(this);
+  }
+
+  performLeftSwipe() {
+    this.setState({ swipeLeft: true });
+    setTimeout(() => {
+      this.setState({ swipeLeft: false });
+    }, animationTime * 1000);
+  }
+
+  performRightSwipe() {
+    this.setState({ swipeRight: true });
+    setTimeout(() => {
+      this.setState({ swipeRight: false });
+    }, animationTime * 1000);
+  }
+
+  render() {
+    return (
+      <Main>
+        <CardContainer>
+          <Card
+            top={30}
+            width={260}
+          />
+          <Card
+            top={20}
+            width={280}
+          />
+          <Card
+            top={10}
+            width={300}
+            animateLeft={this.state.swipeLeft}
+            animateRight={this.state.swipeRight}
+          />
+        </CardContainer>
+        <ButtonContainer>
+          <Button onClick={this.performLeftSwipe} url={'https://openclipart.org/image/2400px/svg_to_png/16155/milker-X-icon.png'} />
+          <Button onClick={this.performRightSwipe} url={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpUjnW1wLnbWx-O8vhXlV9ch6lzKzVEczq_3PaheaqzGCTnfHbeaM3RCY'} />
+        </ButtonContainer>
+      </Main>
+    );
+  }
 }
+
+module.exports = Swiper;
