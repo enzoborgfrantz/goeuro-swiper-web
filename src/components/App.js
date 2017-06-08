@@ -21,11 +21,41 @@ const Title = styled.h1`
   }
 `;
 
+const CardWrapper = styled.div`
+  width:300px;
+  margin: 0 auto;
+  height:400px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+`;
+
+const PictureWrapper = styled.img.attrs({
+  src: props => props.url,
+  alt: 'image of beauty',
+})`
+  height: 300px;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+`;
+
+const DescriptionWrapper = styled.div`
+  border: 2px solid rgba(233, 233, 233, 1);
+  height: 90px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+`;
+
+const Card = () => (
+  <CardWrapper>
+    <PictureWrapper url={'https://www.eurolines.co.uk/assets/v-20160315092537/germany/berlin/berlin-500x500.jpg'} />
+    <DescriptionWrapper />
+  </CardWrapper>
+);
+
 export default function () {
-  const result = helloWorld();
   return (
-    <Wrapper>
-      <Title>{result}</Title>
-    </Wrapper>
+    <Card />
   );
 }
