@@ -114,8 +114,8 @@ const RightLabel = styled.p`
   font-weight: 300;
 `;
 
-const Card = ({ top, width, animateLeft, animateRight }) => (
-  <CardWrapper top={top} width={width} animateLeft={animateLeft} animateRight={animateRight}>
+const Card = ({ key, top, width, animateLeft, animateRight }) => (
+  <CardWrapper key={key} top={top} width={width} animateLeft={animateLeft} animateRight={animateRight}>
     <PictureWrapper url={'https://www.eurolines.co.uk/assets/v-20160315092537/germany/berlin/berlin-500x500.jpg'} />
     <DescriptionWrapper>
       <HalfWidthLabel> <LeftLabel> Berlin </LeftLabel> </HalfWidthLabel>
@@ -148,6 +148,24 @@ class Swiper extends Component {
     this.performRightSwipe = this.performRightSwipe.bind(this);
   }
 
+  getCards() {
+    const cardStack = [];
+
+    for (let i = 0; i < 20; i += 1) {
+      let card;
+      if (i === 0) {
+        card = Card({ key: i, top: 30, width: 260, animateLeft: false, animateRight: false });
+      } else if (i === 1) {
+        card = Card({ key: i, top: 20, width: 280, animateLeft: false, animateRight: false });
+      } else {
+        card = Card({ key: i, top: 10, width: 300, animateLeft: false, animateRight: false });
+      }
+      cardStack.push(card);
+    }
+
+    return cardStack;
+  }
+
   performLeftSwipe() {
     this.setState({ swipeLeft: true });
     setTimeout(() => {
@@ -162,24 +180,12 @@ class Swiper extends Component {
     }, animationTime * 1000);
   }
 
+
   render() {
     return (
       <Main>
         <CardContainer>
-          <Card
-            top={30}
-            width={260}
-          />
-          <Card
-            top={20}
-            width={280}
-          />
-          <Card
-            top={10}
-            width={300}
-            animateLeft={this.state.swipeLeft}
-            animateRight={this.state.swipeRight}
-          />
+          {this.getCards()}
         </CardContainer>
         <ButtonContainer>
           <Button onClick={this.performLeftSwipe} url={'https://openclipart.org/image/2400px/svg_to_png/16155/milker-X-icon.png'} />
