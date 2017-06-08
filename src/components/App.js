@@ -42,7 +42,6 @@ const PictureWrapper = styled.img.attrs({
 `;
 
 const DescriptionWrapper = styled.div`
-  border: 2px solid rgba(233, 233, 233, 1);
   display: flex;
   flex-flow: wrap;
   height: 90px;
