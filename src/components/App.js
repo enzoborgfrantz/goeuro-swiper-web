@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import React, { Component } from 'react';
 import helloWorld from '../modules/hello.module';
 
-const animationTime = 1.65;
+const animationTime = 1.5;
 
 const SwipeLeft = keyframes`
   from {
