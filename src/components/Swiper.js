@@ -57,7 +57,6 @@ class Swiper extends Component {
       setTimeout(() => {
         this.setState({ animation: '' });
       }, 1000);
-      // this.flipCard();
     }
   }
 
