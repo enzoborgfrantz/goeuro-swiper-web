@@ -54,11 +54,12 @@ const CardContainerStyle = styled.div`
 const NextCard = styled(Card)`
   position: absolute;
   top: 0;
+  z-index: -1;
 `;
 
-const CardContainer = ({ cardCount, currentCard, nextCard }) => (
+const CardContainer = ({ cardCount, currentCard, nextCard, animation }) => (
   <CardContainerStyle cardCount={cardCount}>
-    <Card currentCard={currentCard} />
+    <Card currentCard={currentCard} animation={animation} />
     <NextCard currentCard={nextCard} />
   </CardContainerStyle>
 );

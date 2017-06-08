@@ -1,8 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.input.attrs({
   type: 'button',
+  disabled: props => props.disabled,
 })`
   background-color: white;
   appearance: none;

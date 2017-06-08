@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import CardContainer from './CardContainer';
 import ButtonContainer from './ButtonContainer';
+import Match from './Match';
 
 const SwiperStyle = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ class Swiper extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cardCount: 10,
+      cardCount: 3,
       currentCardIndex: 1,
       currentCard: {
         cityName: 'Lisboa',
@@ -21,6 +22,7 @@ class Swiper extends Component {
         price: '80$',
         duration: 'Train 1h 30min',
         travelmode: 'train',
+        deeplink: '',
       },
       nextCard: {
         cityName: 'Paris',
@@ -28,29 +30,71 @@ class Swiper extends Component {
         price: '120$',
         duration: 'Bus 2h 20min',
         travelmode: 'bus',
-      }
+        deeplink: '',
+      },
+      animation: '',
+      showMatchModal: false,
     };
     this.swipeLeft = this.swipeLeft.bind(this);
     this.swipeRight = this.swipeRight.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   swipeLeft() {
-    console.log('left');
+    if (this.state.animation === '') {
+      this.setState({ animation: 'left' });
+      setTimeout(() => {
+        this.setState({ animation: '' });
+      }, 1000);
+      this.flipCard();
+    }
   }
 
   swipeRight() {
-    console.log('right');
+    if (this.state.animation === '') {
+      this.toggleModal();
+      this.setState({ animation: 'right' });
+      setTimeout(() => {
+        this.setState({ animation: '' });
+      }, 1000);
+      // this.flipCard();
+    }
+  }
+
+  flipCard() {
+    this.setState({ currentCard: this.state.nextCard, cardCount: this.state.cardCount - 1 });
+  }
+
+  toggleModal() {
+    this.setState({ showMatchModal: !this.state.showMatchModal });
+    if (this.state.showMatchModal) { this.flipCard(); }
   }
 
   render() {
+    const { cardCount, currentCard, nextCard, animation } = this.state;
+    const { cityName, price, duration, deeplink } = this.state.currentCard;
     return (
       <SwiperStyle>
         <CardContainer
-          cardCount={this.state.cardCount}
-          currentCard={this.state.currentCard}
-          nextCard={this.state.nextCard}
+          cardCount={cardCount}
+          currentCard={currentCard}
+          nextCard={nextCard}
+          animation={animation}
         />
-        <ButtonContainer swipeLeft={this.swipeLeft} swipeRight={this.swipeRight} />
+        <ButtonContainer
+          disabled={cardCount <= 1}
+          swipeLeft={this.swipeLeft}
+          swipeRight={this.swipeRight}
+        />
+        {this.state.showMatchModal &&
+          <Match
+            cityName={cityName}
+            price={price}
+            duration={duration}
+            deeplink={deeplink}
+            closeModal={this.toggleModal}
+          />
+        }
       </SwiperStyle>
     );
   }

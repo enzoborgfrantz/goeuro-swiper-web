@@ -8,10 +8,18 @@ const ButtonContainerStyled = styled.div`
   margin-top: 20px;
 `;
 
-const ButtonContainer = ({ swipeLeft, swipeRight }) => (
+const ButtonContainer = ({ swipeLeft, swipeRight, disabled }) => (
   <ButtonContainerStyled>
-    <Button onClick={swipeLeft} url={'https://openclipart.org/image/2400px/svg_to_png/16155/milker-X-icon.png'} />
-    <Button onClick={swipeRight} url={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpUjnW1wLnbWx-O8vhXlV9ch6lzKzVEczq_3PaheaqzGCTnfHbeaM3RCY'} />
+    <Button
+      disabled={disabled}
+      onClick={swipeLeft}
+      url={'https://openclipart.org/image/2400px/svg_to_png/16155/milker-X-icon.png'}
+    />
+    <Button
+      disabled={disabled}
+      onClick={swipeRight}
+      url={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpUjnW1wLnbWx-O8vhXlV9ch6lzKzVEczq_3PaheaqzGCTnfHbeaM3RCY'}
+    />
   </ButtonContainerStyled>
 );
 
