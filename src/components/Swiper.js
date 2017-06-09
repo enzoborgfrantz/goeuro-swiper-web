@@ -18,11 +18,15 @@ const Header = styled.div`
   background: #fff;
 `;
 
-const TextArea = styled.div`
+const MainContentArea = styled.div`
   height: 240px;
   font-family: Roboto, sans-serif;
   font-weight: 300;
   color: #878787;
+  
+  @media (max-width: 500px) {
+   display: none;
+	}
 `;
 
 const LogoArea = styled.div`
@@ -44,7 +48,10 @@ const WordingTextArea = styled.p`
   letter-spacing: 0.2px;
   line-height: 1.5;
   margin: 0 auto;
-  font-size: 18px
+  font-size: 18px;
+  @media (max-width: 500px) {
+    width: 350px;
+	}
 `;
 
 class Swiper extends Component {
@@ -114,13 +121,13 @@ class Swiper extends Component {
     return (
       <SwiperStyle>
         <Header />
-        <TextArea>
+        <MainContentArea>
           <LogoArea><Logo /></LogoArea>
           <WordingTextArea>
             If you need a break but can't decide where to go, click the button and let us find somewhere
           for you to fall in love with.
           </WordingTextArea>
-        </TextArea>
+        </MainContentArea>
         <CardContainer
           cardCount={cardCount}
           currentCard={currentCard}
