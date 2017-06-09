@@ -1,0 +1,74 @@
+{
+  "routes": [
+    {
+      "posId": "335158",
+      "cityName": "Seebad Heringsdorf",
+      "price": 16,
+      "duration": "3h10min",
+      "content": "",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/335158a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/335158b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/335158c.jpg"
+      ],
+      "travelMode": "Bus",
+      "searchResults": ""
+    },
+    {
+      "posId": "377289",
+      "cityName": "Stralsund",
+      "price": 27,
+      "duration": "3h6min",
+      "content": "A lovely Baltic port city, Stralsund is notable for its brick Gothic architecture and rising popularity as a must-see destination.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/377289a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/377289b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/377289bc.jpg"
+      ],
+      "travelMode": "Train",
+      "searchResults": ""
+    },
+    {
+      "posId": "368571",
+      "cityName": "Vienna",
+      "price": 57,
+      "duration": "3h58min",
+      "content": "Vienna, the luxurious capital of Austria, has vibrant nightlife, contagiously joyful atmosphere and fascinating history.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/368571a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/368571b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/368571c.jpg"
+      ],
+      "travelMode": "Flight",
+      "searchResults": ""
+    },
+    {
+      "posId": "398532",
+      "cityName": "Warsaw",
+      "price": 29,
+      "duration": "4h13min",
+      "content": "The capital of Poland is also its largest city, functioning as an important political, cultural, and financial center.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/398532a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/398532b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/398532c.jpg"
+      ],
+      "travelMode": "Train",
+      "searchResults": ""
+    },
+    {
+      "posId": "373297",
+      "cityName": "Zurich",
+      "price": 60,
+      "duration": "4h3min",
+      "content": "The heart of Swiss commerce, finances, and academia, Zurich boasts museums, galleries, a buzzing nightlife, and a superb atmosphere.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/373297a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/373297b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/373297c.jpg"
+      ],
+      "travelMode": "Train",
+      "searchResults": ""
+    }
+  ]
+}

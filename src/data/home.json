@@ -1,0 +1,14 @@
+{
+  "posId": "xxx",
+  "cityName": "Home",
+  "price": "100",
+  "duration": "1 hr",
+  "content": "HOME",
+  "imageUrl": [
+    "https://cdn-goeuro.com/static_content/hackathon/377289a.jpg",
+    "https://cdn-goeuro.com/static_content/hackathon/377289a.jpg",
+    "https://cdn-goeuro.com/static_content/hackathon/377289a.jpg"
+  ],
+  "travelMode": "HOME",
+  "searchResults": ""
+}

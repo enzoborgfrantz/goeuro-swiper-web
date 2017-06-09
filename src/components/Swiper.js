@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import CardContainer from './CardContainer';
 import ButtonContainer from './ButtonContainer';
 import Match from './Match';
+import locations from '../data/locations.json';
+import getCardFromLocation from '../modules/cardFromLocationBuilder.module';
 
 const SwiperStyle = styled.div`
   display: flex;
@@ -13,25 +15,11 @@ const SwiperStyle = styled.div`
 class Swiper extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      cardCount: 3,
-      currentCardIndex: 1,
-      currentCard: {
-        cityName: 'Lisboa',
-        imageUrl: 'https://www.eurolines.co.uk/assets/v-20160315092537/germany/berlin/berlin-500x500.jpg',
-        price: '80$',
-        duration: 'Train 1h 30min',
-        travelmode: 'train',
-        deeplink: '',
-      },
-      nextCard: {
-        cityName: 'Paris',
-        imageUrl: 'https://www.eurolines.co.uk/assets/v-20160315092537/germany/berlin/berlin-500x500.jpg',
-        price: '120$',
-        duration: 'Bus 2h 20min',
-        travelmode: 'bus',
-        deeplink: '',
-      },
+      cardCount: locations.routes.length,
+      currentCard: getCardFromLocation(locations.routes.pop()),
+      nextCard: getCardFromLocation(locations.routes.pop()),
       animation: '',
       showMatchModal: false,
     };
@@ -45,24 +33,40 @@ class Swiper extends Component {
       this.setState({ animation: 'left' });
       setTimeout(() => {
         this.setState({ animation: '' });
+        this.flipCard();
       }, 1000);
-      this.flipCard();
     }
   }
 
   swipeRight() {
     if (this.state.animation === '') {
       this.toggleModal();
-      this.setState({ animation: 'right' });
-      setTimeout(() => {
-        this.setState({ animation: '' });
-      }, 1000);
+      // this.setState({
+      //   // animation: 'right', // @adds swipe animmation when swiping right
+      // });
+      // setTimeout(() => {
+      //   this.setState({ animation: '' });
+      // }, 1000);
     }
   }
 
   flipCard() {
-    this.setState({ currentCard: this.state.nextCard, cardCount: this.state.cardCount - 1 });
+    const nextCardToBringForward = this.state.nextCard;
+
+    let nextCardInFile;
+    if (this.state.cardCount > 0 && locations.routes.length > 0) {
+      nextCardInFile = getCardFromLocation(locations.routes.pop());
+    }
+
+    if (this.state.cardCount >= 0) {
+      this.setState({
+        cardCount: this.state.cardCount - 1,
+        currentCard: nextCardToBringForward || undefined,
+        nextCard: nextCardInFile || undefined,
+      });
+    }
   }
+
 
   toggleModal() {
     this.setState({ showMatchModal: !this.state.showMatchModal });
@@ -71,7 +75,7 @@ class Swiper extends Component {
 
   render() {
     const { cardCount, currentCard, nextCard, animation } = this.state;
-    const { cityName, price, duration, deeplink } = this.state.currentCard;
+
     return (
       <SwiperStyle>
         <CardContainer
@@ -81,16 +85,17 @@ class Swiper extends Component {
           animation={animation}
         />
         <ButtonContainer
-          disabled={cardCount <= 1}
+          disabled={cardCount === 0}
           swipeLeft={this.swipeLeft}
           swipeRight={this.swipeRight}
         />
         {this.state.showMatchModal &&
+          this.state.currentCard &&
           <Match
-            cityName={cityName}
-            price={price}
-            duration={duration}
-            deeplink={deeplink}
+            cityName={this.state.cityName}
+            price={this.state.price}
+            duration={this.state.duration}
+            deeplink={this.state.deeplink}
             closeModal={this.toggleModal}
           />
         }

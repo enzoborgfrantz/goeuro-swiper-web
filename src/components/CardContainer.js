@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
+import getCardFromLocation from '../modules/cardFromLocationBuilder.module';
+import home from '../data/home.json';
 
 const border = `
   border: 1px solid #d8d8d8;
@@ -57,10 +59,17 @@ const NextCard = styled(Card)`
   z-index: -1;
 `;
 
+const HomeCard = styled(Card)`
+  position: absolute;
+  top: 0;
+  z-index: -2;
+`;
+
 const CardContainer = ({ cardCount, currentCard, nextCard, animation }) => (
   <CardContainerStyle cardCount={cardCount}>
-    <Card currentCard={currentCard} animation={animation} />
-    <NextCard currentCard={nextCard} />
+    {currentCard && <Card currentCard={currentCard} animation={animation} />}
+    {nextCard && <NextCard currentCard={nextCard} />}
+    {<HomeCard currentCard={getCardFromLocation(home)} />}
   </CardContainerStyle>
 );
 
