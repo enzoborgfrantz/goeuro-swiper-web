@@ -5,7 +5,7 @@ import { getSearchOptions } from '../data/searchOptions';
 
 const ModalWrapper = styled.div`
   width:100%;
-  height: 100%;
+  height: 150%;
   display: block;
   position: absolute;
   top: 0;
@@ -19,7 +19,7 @@ const MatchModalStyled = styled.div`
   position: fixed;
   background-color:white;
   top: 50px;
-  width: 70%;
+  width: 550px;
   transform: translate(-50%, 0);
   height: 400px;
   left: 50%;
@@ -27,6 +27,9 @@ const MatchModalStyled = styled.div`
   align-items: center;
   font-family: Roboto;
   border-radius: 5px;
+  @media (max-width: 500px) {
+   width: 350px;
+	}
 `;
 
 const HeartIcon = styled.div`
