@@ -1,4 +1,4 @@
-images = {
+export default {
   goeuroIcon: 'https://cdn-goeuro.com/static_content/hackathon/goeuro.png',
   busIcon: 'https://cdn-goeuro.com/static_content/hackathon/Route_Bus@2x.png',
   planeIcon: 'https://cdn-goeuro.com/static_content/hackathon/Route_Plane@2x.png',

@@ -29,6 +29,7 @@ const CardDescriptionStyled = styled.div`
   background-color: white;
   display: flex;
   flex-flow: wrap;
+  font-family: Roboto;
 `;
 
 const CardDescription = ({ cityName, price, duration }) => (

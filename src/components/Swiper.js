@@ -92,10 +92,10 @@ class Swiper extends Component {
         {this.state.showMatchModal &&
           this.state.currentCard &&
           <Match
-            cityName={this.state.cityName}
-            price={this.state.price}
-            duration={this.state.duration}
-            deeplink={this.state.deeplink}
+            cityName={this.state.currentCard.cityName}
+            price={this.state.currentCard.price}
+            duration={this.state.currentCard.duration}
+            deeplink={this.state.currentCard.deeplink}
             closeModal={this.toggleModal}
           />
         }
