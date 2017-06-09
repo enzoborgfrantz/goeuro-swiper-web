@@ -5,7 +5,6 @@ const Button = styled.button.attrs({
   disabled: props => props.disabled,
   className: props => props.className,
 })`
-  background-color: white;
   appearance: none;
   border: none;
   outline: none;

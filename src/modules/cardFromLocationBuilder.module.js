@@ -3,7 +3,7 @@ export default function (location) {
     cityName: location.cityName,
     imageUrl: location.imageUrl[0],
     price: `${location.price}$`,
-    duration: `${location.travelMode}${location.duration}`,
+    duration: `${location.travelMode} - ${location.duration}`,
     travelmode: location.travelMode,
     deeplink: '',
     content: location.content,

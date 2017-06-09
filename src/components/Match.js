@@ -5,7 +5,7 @@ import { getSearchOptions } from '../data/searchOptions';
 
 const ModalWrapper = styled.div`
   width:100%;
-  height: 100%;
+  height: 150%;
   display: block;
   position: absolute;
   top: 0;
@@ -19,13 +19,17 @@ const MatchModalStyled = styled.div`
   position: fixed;
   background-color:white;
   top: 50px;
-  width: 100%;
+  width: 550px;
   transform: translate(-50%, 0);
   height: 400px;
   left: 50%;
   justify-content: center;
   align-items: center;
   font-family: Roboto;
+  border-radius: 5px;
+  @media (max-width: 500px) {
+   width: 350px;
+	}
 `;
 
 const HeartIcon = styled.div`
@@ -40,7 +44,7 @@ const Description = styled.div`
   ${''/* height: 100px; */}
   background-color: #efeff0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
 `;
 
@@ -75,6 +79,7 @@ const CloseButton = Button.extend`
   font-family: Roboto;
   font-size: 24px;
   color: #999999;
+  background-color: transparent;
 `;
 
 const redirectToSearch = (depPos, arrPos) => {
