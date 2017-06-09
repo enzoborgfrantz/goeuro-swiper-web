@@ -5,6 +5,7 @@ import ButtonContainer from './ButtonContainer';
 import Match from './Match';
 import locations from '../data/locations.json';
 import getCardFromLocation from '../modules/cardFromLocationBuilder.module';
+import assets from '../assets/assets';
 
 const SwiperStyle = styled.div`
   display: flex;
@@ -52,6 +53,16 @@ const WordingTextArea = styled.p`
   @media (max-width: 500px) {
     width: 350px;
 	}
+`;
+
+const HeaderLogo = styled.div`
+  background: url(${assets.goeuroIcon});
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  width: 100px;
+  height: 20px;
+  margin: 30px auto auto 40px;
 `;
 
 class Swiper extends Component {
@@ -120,7 +131,9 @@ class Swiper extends Component {
 
     return (
       <SwiperStyle>
-        <Header />
+        <Header>
+          <HeaderLogo />
+        </Header>
         <MainContentArea>
           <LogoArea><Logo /></LogoArea>
           <WordingTextArea>
