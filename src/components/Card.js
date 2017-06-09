@@ -6,7 +6,7 @@ const Picture = styled.img.attrs({
   src: props => props.url,
   alt: 'city picture',
 })`
-  height: 300px;
+  height: 400px;
   width: 100%;
 `;
 

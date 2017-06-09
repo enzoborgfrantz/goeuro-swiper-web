@@ -6,6 +6,7 @@ const ButtonContainerStyled = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 150px;
 `;
 
 const SwipeButton = Button.extend`

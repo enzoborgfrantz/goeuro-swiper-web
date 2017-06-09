@@ -12,6 +12,34 @@ const SwiperStyle = styled.div`
   justify-content: center;
 `;
 
+const Header = styled.div`
+  height: 75px;
+  margin-bottom: 50px;
+  background: #fff;
+`;
+
+const TextArea = styled.div`
+  height: 200px;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  color: #878787;
+`;
+
+const HeaderTextArea = styled.h1`
+  text-transform: uppercase;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+`;
+
+const WordingTextArea = styled.p`
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  font-size: 18px
+`;
+
 class Swiper extends Component {
   constructor(props) {
     super(props);
@@ -78,6 +106,14 @@ class Swiper extends Component {
 
     return (
       <SwiperStyle>
+        <Header />
+        <TextArea>
+          <HeaderTextArea> Traveler </HeaderTextArea>
+          <WordingTextArea>
+            If you need a break but can't decide where to go, click the button and let us find somewhere
+          for you to fall in love with.
+          </WordingTextArea>
+        </TextArea>
         <CardContainer
           cardCount={cardCount}
           currentCard={currentCard}
