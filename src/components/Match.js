@@ -19,13 +19,14 @@ const MatchModalStyled = styled.div`
   position: fixed;
   background-color:white;
   top: 50px;
-  width: 100%;
+  width: 70%;
   transform: translate(-50%, 0);
   height: 400px;
   left: 50%;
   justify-content: center;
   align-items: center;
   font-family: Roboto;
+  border-radius: 5px;
 `;
 
 const HeartIcon = styled.div`
@@ -40,7 +41,7 @@ const Description = styled.div`
   ${''/* height: 100px; */}
   background-color: #efeff0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
 `;
 
