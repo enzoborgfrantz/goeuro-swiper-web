@@ -6,5 +6,6 @@ export default function (location) {
     duration: `${location.travelMode}${location.duration}`,
     travelmode: location.travelMode,
     deeplink: '',
+    content: location.content,
   };
 }

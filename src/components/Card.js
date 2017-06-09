@@ -44,13 +44,53 @@ const CardStyle = styled.div`
   ${props => getAnimation(props.animation)}
 `;
 
+const PictureContentWrapper = styled.div`
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 300px;
+`;
+
+const Content = styled.div`
+  background-color: rgba(0,0,0, .3);
+  position: absolute;
+  height: 300px;
+  color: white;
+  font-family: Roboto;
+  border-radius: 5px;
+  width: 100%;
+  top: 0;
+`;
+
+const ContentText = styled.div`
+  bottom: 10px;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  opacity: 1;
+  color:white;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 100;
+  font-size: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+`;
 
 const Card = ({ currentCard, animation, className }) => (
   <CardStyle
     className={className}
     animation={animation}
   >
-    <Picture url={currentCard.imageUrl} />
+    <PictureContentWrapper>
+      <Picture url={currentCard.imageUrl} />
+      <Content>
+        <ContentText>
+          {currentCard.content}
+        </ContentText>
+      </Content>
+    </PictureContentWrapper>
     <CardDescription
       price={currentCard.price}
       duration={currentCard.duration}
