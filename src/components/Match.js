@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from './Button';
 
 const ModalWrapper = styled.div`
   width:100%;
@@ -45,8 +46,29 @@ const ItalicHeader = styled.h2`
   font-style: italic;
 `;
 
+const BookButton = Button.extend`
+  color:white;
+  border-radius: 4px;
+  box-shadow: inset 0 -2px 0 0 rgba(0,0,0,.15);
+  background-color: #f7a600;
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  &:hover{
+    background-color: #f9bb3c;
+  }
+  &:active{
+    background-color: #f49414;
+  };
+  margin-top: 10px;
+`;
+
+const redirectToSearch = () => {
+  console.log('u done booked');
+};
+
 const MatchModal = ({ cityName, price, duration, deeplink, closeModal }) => (
-  <ModalWrapper>
+  <ModalWrapper onClick={closeModal}>
     <MatchModalStyled>
       <button onClick={closeModal}>X</button>
       <HeartIcon url={'https://maxcdn.icons8.com/office/PNG/512/Gaming/hearts-512.png'} />
@@ -57,7 +79,7 @@ const MatchModal = ({ cityName, price, duration, deeplink, closeModal }) => (
         <span>{price}</span>
         <span>{duration}</span>
       </Description>
-      <button>Book now</button>
+      <BookButton onClick={redirectToSearch}>Book me</BookButton>
     </MatchModalStyled>
   </ModalWrapper>
 );

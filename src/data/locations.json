@@ -1,74 +1,354 @@
 {
   "routes": [
     {
+      "posId": "393153",
+      "cityName": "Amsterdam",
+      "price": 39,
+      "duration": "6h13min",
+      "content": "TAn old fashioned charmer that loves biking.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/393153a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/393153b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/393153c.jpg"
+      ],
+      "travelMode": "Train",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Train_Station@2x.png"
+    },
+    {
+      "posId": "378468",
+      "cityName": "Barcelona",
+      "price": 73,
+      "duration": "5h33min",
+      "content": "Culuture & seafood loving with a great build.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/378468a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/378468b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/378468c.jpg"
+      ],
+      "travelMode": "Flight",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Plane@2x.png"
+    },
+    {
+      "posId": "383168",
+      "cityName": "Budapest",
+      "price": 22,
+      "duration": "4h19min",
+      "content": "Loves a good spa and into architecture.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/383168a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/383168b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/383168c.jpg"
+      ],
+      "travelMode": "Flight",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Plane@2x.png"
+    },
+    {
+      "posId": "377541",
+      "cityName": "Copenhagen",
+      "price": 23,
+      "duration": "3h33min",
+      "content": "A stylish viking that enjoys fine dining.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/377541a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/377541b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/377541c.jpg"
+      ],
+      "travelMode": "Bus",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Bus@2x.png"
+    },
+    {
+      "posId": "376367",
+      "cityName": "Dresden",
+      "price": 19,
+      "duration": "1h52min",
+      "content": "Beautiful and baroque with a dark past.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/376367a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/376367b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/376367c.jpg"
+      ],
+      "travelMode": "Train",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Train_Station@2x.png"
+    },
+    {
+      "posId": "398223",
+      "cityName": "Gdansk",
+      "price": 15,
+      "duration": "4h8min",
+      "content": "Loves a good spa and into architecture.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/398223a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/398223b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/398223c.jpg"
+      ],
+      "travelMode": "Bus",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Bus@2x.png"
+    },
+    {
+      "posId": "376583",
+      "cityName": "Hamburg",
+      "price": 10,
+      "duration": "1h42min",
+      "content": "Likes park hangouts and has a great spirit.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/376583a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/376583b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/376583c.jpg"
+      ],
+      "travelMode": "Bus",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Bus@2x.png"
+    },
+    {
+      "posId": "398202",
+      "cityName": "Krakow",
+      "price": 29,
+      "duration": "4h23min",
+      "content": "Metropolitan, cultural and spiritual.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/398202a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/398202b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/398202c.jpg"
+      ],
+      "travelMode": "Train",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Train_Station@2x.png"
+    },
+    {
+      "posId": "376809",
+      "cityName": "Leipzig",
+      "price": 8,
+      "duration": "1h9min",
+      "content": "A quirky gem that likes music, art and cafés.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/376809a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/376809b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/376809c.jpg"
+      ],
+      "travelMode": "Bus",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Bus@2x.png"
+    },
+    {
+      "posId": "380553",
+      "cityName": "London",
+      "price": 37,
+      "duration": "3h48min",
+      "content": "Majestic yet modern and exciting.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/380553a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/380553b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/380553c.jpg"
+      ],
+      "travelMode": "Flight",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Plane@2x.png"
+    },
+    {
+      "posId": "378660",
+      "cityName": "Malaga",
+      "price": 87,
+      "duration": "3h25min",
+      "content": "Majestic yet modern and exciting.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/378660a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/378660b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/378660c.jpg"
+      ],
+      "travelMode": "Flight",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Plane@2x.png"
+    },
+    {
+      "posId": "376946",
+      "cityName": "Munich",
+      "price": 29,
+      "duration": "3h48min",
+      "content": "Cultural, arty and fun-loving.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/376946a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/376946b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/376946c.jpg"
+      ],
+      "travelMode": "Train",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Train_Station@2x.png"
+    },
+    {
+      "posId": "387876",
+      "cityName": "Napoli",
+      "price": 90,
+      "duration": "5h45min",
+      "content": "Passionate especially when it comes to pizza.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/387876a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/387876b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/387876c.jpg"
+      ],
+      "travelMode": "Flight",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Plane@2x.png"
+    },
+    {
+      "posId": "379691",
+      "cityName": "Nice",
+      "price": 85,
+      "duration": "4h45min",
+      "content": "Stunning and with a real joie de vivre.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/379691a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/379691b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/379691c.jpg"
+      ],
+      "travelMode": "Flight",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Plane@2x.png"
+    },
+    {
+      "posId": "379727",
+      "cityName": "Paris",
+      "price": 44,
+      "duration": "4h43min",
+      "content": "Bright, cultural and loves good food.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/379727a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/379727b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/379727c.jpg"
+      ],
+      "travelMode": "Flight",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Plane@2x.png"
+    },
+    {
+      "posId": "398422",
+      "cityName": "Poznan",
+      "price": 12,
+      "duration": "2h34min",
+      "content": "Lively and loves a good market.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/398422a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/398422b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/398422c.jpg"
+      ],
+      "travelMode": "Bus",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Bus@2x.png"
+    },
+    {
+      "posId": "375859",
+      "cityName": "Prague",
+      "price": 25,
+      "duration": "3h51min",
+      "content": "Thrifty with a bit of old fashioned charm.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/375859a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/375859b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/375859c.jpg"
+      ],
+      "travelMode": "Train",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Train_Station@2x.png"
+    },
+    {
+      "posId": "377087",
+      "cityName": "Quedlinburg",
+      "price": 19,
+      "duration": "2h50min",
+      "content": "Romanesque and picturesque.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/377087a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/377087b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/377087c.jpg"
+      ],
+      "travelMode": "Train",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Train_Station@2x.png"
+    },
+    {
+      "posId": "388498",
+      "cityName": "Rome",
+      "price": 46,
+      "duration": "4h58min",
+      "content": "Anicent but stunningly vibrant.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/388498a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/388498b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/388498c.jpg"
+      ],
+      "travelMode": "Flight",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Plane@2x.png"
+    },
+    {
+      "posId": "377151",
+      "cityName": "Rostock",
+      "price": 10,
+      "duration": "2h2min",
+      "content": "Colourful with a nautical flair.",
+      "imageUrl": [
+        "https://cdn-goeuro.com/static_content/hackathon/377151a.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/377151b.jpg",
+        "https://cdn-goeuro.com/static_content/hackathon/377151c.jpg"
+      ],
+      "travelMode": "Bus",
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Bus@2x.png"
+    },
+    {
       "posId": "335158",
       "cityName": "Seebad Heringsdorf",
       "price": 16,
       "duration": "3h10min",
-      "content": "",
+      "content": "Loves looking at the sunset from a strandkorb.",
       "imageUrl": [
         "https://cdn-goeuro.com/static_content/hackathon/335158a.jpg",
         "https://cdn-goeuro.com/static_content/hackathon/335158b.jpg",
         "https://cdn-goeuro.com/static_content/hackathon/335158c.jpg"
       ],
       "travelMode": "Bus",
-      "searchResults": ""
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Bus@2x.png"
     },
     {
       "posId": "377289",
       "cityName": "Stralsund",
       "price": 27,
       "duration": "3h6min",
-      "content": "A lovely Baltic port city, Stralsund is notable for its brick Gothic architecture and rising popularity as a must-see destination.",
+      "content": "Gothic with a love of architecture.",
       "imageUrl": [
         "https://cdn-goeuro.com/static_content/hackathon/377289a.jpg",
         "https://cdn-goeuro.com/static_content/hackathon/377289b.jpg",
         "https://cdn-goeuro.com/static_content/hackathon/377289bc.jpg"
       ],
       "travelMode": "Train",
-      "searchResults": ""
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Train_Station@2x.png"
     },
     {
       "posId": "368571",
       "cityName": "Vienna",
       "price": 57,
       "duration": "3h58min",
-      "content": "Vienna, the luxurious capital of Austria, has vibrant nightlife, contagiously joyful atmosphere and fascinating history.",
+      "content": "Loves a night on the opera and luxury.",
       "imageUrl": [
         "https://cdn-goeuro.com/static_content/hackathon/368571a.jpg",
         "https://cdn-goeuro.com/static_content/hackathon/368571b.jpg",
         "https://cdn-goeuro.com/static_content/hackathon/368571c.jpg"
       ],
       "travelMode": "Flight",
-      "searchResults": ""
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Route_Plane@2x.png"
     },
     {
       "posId": "398532",
       "cityName": "Warsaw",
       "price": 29,
       "duration": "4h13min",
-      "content": "The capital of Poland is also its largest city, functioning as an important political, cultural, and financial center.",
+      "content": "Into politics and culture.",
       "imageUrl": [
         "https://cdn-goeuro.com/static_content/hackathon/398532a.jpg",
         "https://cdn-goeuro.com/static_content/hackathon/398532b.jpg",
         "https://cdn-goeuro.com/static_content/hackathon/398532c.jpg"
       ],
       "travelMode": "Train",
-      "searchResults": ""
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Train_Station@2x.png"
     },
     {
       "posId": "373297",
       "cityName": "Zurich",
       "price": 60,
       "duration": "4h3min",
-      "content": "The heart of Swiss commerce, finances, and academia, Zurich boasts museums, galleries, a buzzing nightlife, and a superb atmosphere.",
+      "content": "Loves museum visits and stays up late.",
       "imageUrl": [
         "https://cdn-goeuro.com/static_content/hackathon/373297a.jpg",
         "https://cdn-goeuro.com/static_content/hackathon/373297b.jpg",
         "https://cdn-goeuro.com/static_content/hackathon/373297c.jpg"
       ],
       "travelMode": "Train",
-      "searchResults": ""
+      "travelIcon": "https://cdn-goeuro.com/static_content/hackathon/Train_Station@2x.png"
     }
   ]
 }

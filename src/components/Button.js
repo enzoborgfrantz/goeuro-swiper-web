@@ -1,21 +1,13 @@
 import styled from 'styled-components';
 
-const Button = styled.input.attrs({
+const Button = styled.button.attrs({
   type: 'button',
   disabled: props => props.disabled,
+  className: props => props.className,
 })`
   background-color: white;
   appearance: none;
-  height: 107px;
-  width: 107px;
   border: none;
-  border-radius: 100%;
-  border: 12px solid #f4f4f3;
-  background: url(${props => props.url});
-  background-size: cover;
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
   outline: none;
 `;
 
