@@ -75,6 +75,7 @@ const CloseButton = Button.extend`
   font-family: Roboto;
   font-size: 24px;
   color: #999999;
+  background-color: transparent;
 `;
 
 const redirectToSearch = (depPos, arrPos) => {
