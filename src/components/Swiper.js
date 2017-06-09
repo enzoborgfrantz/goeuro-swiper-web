@@ -19,23 +19,30 @@ const Header = styled.div`
 `;
 
 const TextArea = styled.div`
-  height: 200px;
+  height: 240px;
   font-family: Roboto, sans-serif;
   font-weight: 300;
   color: #878787;
 `;
 
-const HeaderTextArea = styled.h1`
-  text-transform: uppercase;
-  font-weight: 300;
-  color: black;
-  text-align: center;
-  font-size: 30px;
+const LogoArea = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+`;
+
+const Logo = styled.img.attrs({
+  src: 'https://cdn-goeuro.com/static_content/hackathon/logo@2x.png',
+  width: '180',
+})`
+  display: block;
+  margin: 0 auto;
 `;
 
 const WordingTextArea = styled.p`
   text-align: center;
   width: 500px;
+  letter-spacing: 0.2px;
+  line-height: 1.5;
   margin: 0 auto;
   font-size: 18px
 `;
@@ -108,7 +115,7 @@ class Swiper extends Component {
       <SwiperStyle>
         <Header />
         <TextArea>
-          <HeaderTextArea> Traveler </HeaderTextArea>
+          <LogoArea><Logo /></LogoArea>
           <WordingTextArea>
             If you need a break but can't decide where to go, click the button and let us find somewhere
           for you to fall in love with.

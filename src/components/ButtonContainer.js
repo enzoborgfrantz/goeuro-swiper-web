@@ -6,12 +6,16 @@ const ButtonContainerStyled = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 150px;
+  margin-bottom: 60px;
+  @media (min-width: 700px) {
+    margin-bottom: 50px;
+	}
 `;
 
 const SwipeButton = Button.extend`
   border-radius: 100%;
-  border: 12px solid #f4f4f3;
+  border: 12px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
   background: url(${props => props.url});
   background-size: cover;
   background-size: 60%;
@@ -19,6 +23,12 @@ const SwipeButton = Button.extend`
   background-position: 50% 50%;
   height: 107px;
   width: 107px;
+  margin: 0 10px;
+  @media (min-width: 700px) {
+	  margin: 0 148px;
+    position: relative;
+    bottom: 300px;
+	}
 `;
 
 const ButtonContainer = ({ swipeLeft, swipeRight, disabled }) => (
