@@ -12,6 +12,48 @@ const SwiperStyle = styled.div`
   justify-content: center;
 `;
 
+const Header = styled.div`
+  height: 75px;
+  margin-bottom: 50px;
+  background: #fff;
+`;
+
+const MainContentArea = styled.div`
+  height: 240px;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  color: #878787;
+  
+  @media (max-width: 500px) {
+   display: none;
+	}
+`;
+
+const LogoArea = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+`;
+
+const Logo = styled.img.attrs({
+  src: 'https://cdn-goeuro.com/static_content/hackathon/logo@2x.png',
+  width: '180',
+})`
+  display: block;
+  margin: 0 auto;
+`;
+
+const WordingTextArea = styled.p`
+  text-align: center;
+  width: 500px;
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+  margin: 0 auto;
+  font-size: 18px;
+  @media (max-width: 500px) {
+    width: 350px;
+	}
+`;
+
 class Swiper extends Component {
   constructor(props) {
     super(props);
@@ -78,6 +120,14 @@ class Swiper extends Component {
 
     return (
       <SwiperStyle>
+        <Header />
+        <MainContentArea>
+          <LogoArea><Logo /></LogoArea>
+          <WordingTextArea>
+            If you need a break but can't decide where to go, click the button and let us find somewhere
+          for you to fall in love with.
+          </WordingTextArea>
+        </MainContentArea>
         <CardContainer
           cardCount={cardCount}
           currentCard={currentCard}

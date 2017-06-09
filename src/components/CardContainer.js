@@ -47,8 +47,10 @@ const getFakeCards = (cardCount) => {
 };
 
 const CardContainerStyle = styled.div`
-  width: 100%;
-  height: 400px;
+  font-family: Roboto, sans-serif;
+  margin: 0 auto;
+  width: 400px;
+  height: 500px;
   position: relative;
   ${props => getFakeCards(props.cardCount)}
 `;
