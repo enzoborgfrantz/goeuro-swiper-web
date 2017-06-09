@@ -85,8 +85,8 @@ const redirectToSearch = (depPos, arrPos) => {
     .then(r => r.json())
     .then((d) => {
       const deeplink = `https://www.goeuro.com/travel-search2/results/${d.searchId}/train`;
-      console.log(deeplink);
-      // window.location.replace(deeplink);
+      // console.log(deeplink);
+      window.location.replace(deeplink);
     },
   );
 };
